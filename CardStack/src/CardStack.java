@@ -37,10 +37,16 @@ public class CardStack {
         return top == 0;
     }
 
+    public int size() { return top; }
+
     public void print() {
-        System.out.println("Printing Stack..");
-        for (int i = top - 1; i >= 0; i--) {
-            System.out.println(stack[i]);
+        if (isEmpty()) {
+            System.out.println("Empty");
+        }
+        else {
+            for (int i = top - 1; i >= 0; i--) {
+                System.out.println(stack[i]);
+            }
         }
     }
 }
