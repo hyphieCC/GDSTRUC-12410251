@@ -17,6 +17,16 @@ public class Main {
 
         hashtable.print();
 
-        System.out.println("\nElement at key " + togepi.getName() + " = " + hashtable.get(togepi.getName()));
+        System.out.println("\nElement at key " + togepi.getName() + " = " + hashtable.get(togepi.getName()) + "\n");
+
+        Player removed = hashtable.remove("Celebi");
+        System.out.println("Removed key: " + removed + "\n");
+        hashtable.print();
+
+        System.out.println("\nElement at key " + mankey.getName() + " = " + hashtable.get(mankey.getName()) + "\n");
+
+        Player dodrio = new Player(85, "Dodrio", 85);
+        hashtable.put(dodrio.getName(), dodrio);
+        hashtable.print();
     }
 }
