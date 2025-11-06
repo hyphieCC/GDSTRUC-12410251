@@ -56,15 +56,27 @@ public class Node {
         }
     }
 
-    public void inOrderTraverse() {
+    public void traverseInOrderAscending() {
         if (left != null) {
-            left.inOrderTraverse();
+            left.traverseInOrderAscending();
         }
 
         System.out.println("Traversed: " + this);
 
         if (right != null) {
-            right.inOrderTraverse();
+            right.traverseInOrderAscending();
+        }
+    }
+
+    public void traverseInOrderDescending() {
+        if (right != null) {
+            right.traverseInOrderDescending();
+        }
+
+        System.out.println("Traversed: " + this);
+
+        if (left != null) {
+            left.traverseInOrderDescending();
         }
     }
 
@@ -77,11 +89,27 @@ public class Node {
             return left.get(value);
         }
 
-        if (right != null && value < data) {
+        if (right != null && value > data) {
             return right.get(value);
         }
 
         return null;
+    }
+
+    public Node getMin() {
+        if (left == null) {
+            return this;
+        }
+
+        return left.getMin();
+    }
+
+    public Node getMax() {
+        if (right == null) {
+            return this;
+        }
+
+        return right.getMax();
     }
 
     @Override

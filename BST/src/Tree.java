@@ -10,9 +10,15 @@ public class Tree {
         }
     }
 
-    public void inOrderTraverse() {
+    public void traverseInOrderAscending() {
         if (root != null) {
-            root.inOrderTraverse();
+            root.traverseInOrderAscending();
+        }
+    }
+
+    public void traverseInOrderDescending() {
+        if (root != null) {
+            root.traverseInOrderDescending();
         }
     }
 
@@ -22,5 +28,21 @@ public class Tree {
         }
 
         return root.get(value);
+    }
+
+    public Node getMin() {
+        if (root == null) {
+            return null;
+        }
+
+        return root.getMin();
+    }
+
+    public Node getMax() {
+        if (root == null) {
+            return null;
+        }
+
+        return root.getMax();
     }
 }

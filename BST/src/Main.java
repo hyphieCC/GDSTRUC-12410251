@@ -11,9 +11,14 @@ public class Main {
         bst.insert(22);
         bst.insert(32);
 
-        bst.inOrderTraverse();
+        bst.traverseInOrderAscending();
 
         int value = 100;
-        System.out.println("Node with value " + value + " - " + bst.get(value));
+        System.out.println("\nNode with value " + value + " - " + bst.get(value) + "\n");
+
+        bst.traverseInOrderDescending();
+
+        System.out.println("\nLowest value " + bst.getMin());
+        System.out.println("Highest value " + bst.getMax());
     }
 }
